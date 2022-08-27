@@ -1,21 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63E80951-976A-4C35-A2F7-1D4519F89E62}</ProjectGuid>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DAD18A03-63E6-4EB5-BF88-7077F1B29F6E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>Wor_Eazy_CAM.My.MyApplication</StartupObject>
     <RootNamespace>Wor_Eazy_CAM</RootNamespace>
     <AssemblyName>WorEazyCAM</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <Deterministic>true</Deterministic>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Worcome\Desktop\Wor EazyCAM\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl></SupportUrl>
+    <ErrorReportUrl></ErrorReportUrl>
+    <TargetCulture>es</TargetCulture>
+    <ProductName>Wor EazyCAM</ProductName>
+    <PublisherName>Worcome Studios</PublisherName>
+    <SuiteName>Worcome Apps</SuiteName>
+    <ApplicationRevision>20</ApplicationRevision>
+    <ApplicationVersion>10.04.20.20</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -24,8 +49,8 @@
     <DocumentationFile>WorEazyCAM.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
@@ -46,16 +71,92 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>EazyCAM.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>03A37566E6D81CFE3FA3E157029E31E2860550E1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Eazy CAM_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls">
+      <HintPath>bin\Debug\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>bin\Debug\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>bin\Debug\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.FFMPEG, Version=2.2.5.0, Culture=neutral, PublicKeyToken=03563089b1be05dd, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.FFMPEG.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.VFW">
+      <HintPath>bin\Debug\AForge.Video.VFW.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Vision">
+      <HintPath>bin\Debug\AForge.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV">
+      <HintPath>bin\Debug\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.OCR">
+      <HintPath>bin\Debug\Emgu.CV.OCR.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util">
+      <HintPath>bin\Debug\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="HaarCascadeClassifer">
+      <HintPath>bin\Debug\HaarCascadeClassifer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WebCAM">
+      <HintPath>bin\Debug\WebCAM.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -70,6 +171,38 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppHelper.designer.vb">
+      <DependentUpon>AppHelper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AppHelper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppService.vb" />
+    <Compile Include="AppSupport.designer.vb">
+      <DependentUpon>AppSupport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AppSupport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppUpdate.designer.vb">
+      <DependentUpon>AppUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AppUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\CAM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\CAM.Designer.vb">
+      <DependentUpon>CAM.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -85,16 +218,141 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Options.Designer.vb">
+      <DependentUpon>Options.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Options.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\CAPTURA.Designer.vb">
+      <DependentUpon>CAPTURA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubApps\CAPTURA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EazyCAM.Designer.vb">
+      <DependentUpon>EazyCAM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EazyCAM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\FastCAM.Designer.vb">
+      <DependentUpon>FastCAM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubApps\FastCAM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\EDITOR.Designer.vb">
+      <DependentUpon>EDITOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubApps\EDITOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\DM.Designer.vb">
+      <DependentUpon>DM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubApps\DM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selector.Designer.vb">
+      <DependentUpon>Selector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Selector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\CAMPro.Designer.vb">
+      <DependentUpon>CAMPro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubApps\CAMPro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\FM.Designer.vb">
+      <DependentUpon>FM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubApps\FM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\Video.designer.vb">
+      <DependentUpon>Video.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubApps\Video.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\TwoCams.Designer.vb">
+      <DependentUpon>TwoCams.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubApps\TwoCams.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubApps\ORC.Designer.vb">
+      <DependentUpon>ORC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubApps\ORC.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppHelper.resx">
+      <DependentUpon>AppHelper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppSupport.resx">
+      <DependentUpon>AppSupport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppUpdate.resx">
+      <DependentUpon>AppUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubApps\CAM.resx">
+      <DependentUpon>CAM.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubApps\CAPTURA.resx">
+      <DependentUpon>CAPTURA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EazyCAM.resx">
+      <DependentUpon>EazyCAM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubApps\FastCAM.resx">
+      <DependentUpon>FastCAM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubApps\EDITOR.resx">
+      <DependentUpon>EDITOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubApps\DM.resx">
+      <DependentUpon>DM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selector.resx">
+      <DependentUpon>Selector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubApps\CAMPro.resx">
+      <DependentUpon>CAMPro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubApps\FM.resx">
+      <DependentUpon>FM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubApps\Video.resx">
+      <DependentUpon>Video.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubApps\TwoCams.resx">
+      <DependentUpon>TwoCams.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubApps\ORC.resx">
+      <DependentUpon>ORC.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -105,5 +363,42 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Worcome Corp PLN.png" />
+    <None Include="Resources\No TV Signal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EazyCAM.ico" />
+    <None Include="Resources\SistemTrail.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

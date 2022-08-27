@@ -59,5 +59,62 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property No_TV_Signal() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("No_TV_Signal", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property SistemTrail() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("SistemTrail", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a 01001011 01100101 01111001
+        '''01000001 01100011 01100011
+        '''01100101 01110011 01110011
+        '''00111110 00101000 01010111
+        '''01101111 01110010 01100011
+        '''01101111 01101101 01100101
+        '''01000011 01100101 01110010
+        '''01110100 01101001 01100110
+        '''01101001 01100011 01100001
+        '''01110100 01100101 00101110
+        '''01100011 01100101 01110010
+        '''00101001 01000000 00101110
+        '''01010111 01101111 01110010
+        '''01000011 01001111 01000100
+        '''01000101 01000001 01110101
+        '''01110100 01101111 01101101
+        '''01100001 01110100 01101001
+        '''01100011 01001011 01100101
+        '''01111001 [resto de la cadena truncado]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property VerifyKeyAccess() As String
+            Get
+                Return ResourceManager.GetString("VerifyKeyAccess", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Worcome_Corp_PLN() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Worcome_Corp_PLN", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
     End Module
 End Namespace

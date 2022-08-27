@@ -53,6 +53,18 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property OfflineMode() As Boolean
+            Get
+                Return CType(Me("OfflineMode"),Boolean)
+            End Get
+            Set
+                Me("OfflineMode") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
